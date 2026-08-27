@@ -1,2 +1,24 @@
-case_id	label	x	y	z	block_state	expected
-stock-control	stone stock rendering control	176	100	175	minecraft:stone	stock-visible
+case_id	label	x	y	z	block_state	verify_state	place	expected
+bridge-white-floor	generated bridge white safe control	162	100	160	laserbridges:laser_block_powered[color=0,face=floor,facing=north]	laserbridges:laser_block_powered[color=0,face=floor,facing=north]	true	white-tinted-translucent-emissive
+bridge-yellow-wall	generated bridge yellow wall east	164	100	160	laserbridges:laser_block_powered[color=4,face=wall,facing=east]	laserbridges:laser_block_powered[color=4,face=wall,facing=east]	true	yellow-tinted-translucent-emissive
+bridge-cyan-ceiling	generated bridge cyan ceiling west	166	100	160	laserbridges:laser_block_powered[color=9,face=ceiling,facing=west]	laserbridges:laser_block_powered[color=9,face=ceiling,facing=west]	true	cyan-tinted-translucent-emissive
+bridge-black-floor	generated bridge black floor south	168	100	160	laserbridges:laser_block_powered[color=15,face=floor,facing=south]	laserbridges:laser_block_powered[color=15,face=floor,facing=south]	true	black-tinted-translucent-emissive
+fence-white-floor	generated fence white safe control	162	100	162	laserbridges:laser_fence_powered[color=0,face=floor,facing=north]	laserbridges:laser_fence_powered[color=0,face=floor,facing=north]	true	white-tinted-translucent-emissive
+fence-light-blue-wall	generated fence light blue wall south	164	100	162	laserbridges:laser_fence_powered[color=3,face=wall,facing=south]	laserbridges:laser_fence_powered[color=3,face=wall,facing=south]	true	light-blue-tinted-translucent-emissive
+fence-purple-ceiling	generated fence purple ceiling east	166	100	162	laserbridges:laser_fence_powered[color=10,face=ceiling,facing=east]	laserbridges:laser_fence_powered[color=10,face=ceiling,facing=east]	true	purple-tinted-translucent-emissive
+fence-green-wall	generated fence green wall west	168	100	162	laserbridges:laser_fence_powered[color=13,face=wall,facing=west]	laserbridges:laser_fence_powered[color=13,face=wall,facing=west]	true	green-tinted-translucent-emissive
+bridge-source-floor-support	support for unpowered bridge source	162	99	165	minecraft:stone	minecraft:stone	true	support
+bridge-source-unpowered	orange bridge source unpowered floor	162	100	165	laserbridges:laser_source_block[color=1,face=floor,facing=north,powered=false]	laserbridges:laser_source_block[color=1,face=floor,facing=north,powered=false]	true	orange-source-unpowered
+fence-source-ceiling-support	support for unpowered fence source	165	101	165	minecraft:stone	minecraft:stone	true	support
+fence-source-unpowered	pink fence source unpowered ceiling	165	100	165	laserbridges:laser_fence_source_block[color=6,face=ceiling,facing=south,powered=false]	laserbridges:laser_fence_source_block[color=6,face=ceiling,facing=south,powered=false]	true	pink-source-unpowered
+stock-control	stone stock rendering control	171	100	165	minecraft:stone	minecraft:stone	true	stock-visible
+natural-bridge-power	redstone support and power for natural bridge row	160	100	170	minecraft:redstone_block	minecraft:redstone_block	true	powered-support
+natural-bridge-source	blue naturally generated bridge source	161	100	170	laserbridges:laser_source_block[color=11,face=wall,facing=east,powered=false]	laserbridges:laser_source_block[color=11,face=wall,facing=east,powered=true]	true	blue-source-powered
+natural-bridge-first	first naturally generated blue bridge	162	100	170	laserbridges:laser_block_powered[color=11,face=wall,facing=east]	laserbridges:laser_block_powered[color=11,face=wall,facing=east]	false	blue-natural-bridge
+natural-bridge-middle	middle naturally generated blue bridge	168	100	170	laserbridges:laser_block_powered[color=11,face=wall,facing=east]	laserbridges:laser_block_powered[color=11,face=wall,facing=east]	false	blue-natural-bridge
+natural-bridge-last	last naturally generated blue bridge	175	100	170	laserbridges:laser_block_powered[color=11,face=wall,facing=east]	laserbridges:laser_block_powered[color=11,face=wall,facing=east]	false	blue-natural-bridge
+natural-fence-power	redstone support and power for natural fence row	160	100	173	minecraft:redstone_block	minecraft:redstone_block	true	powered-support
+natural-fence-source	red naturally generated fence source	161	100	173	laserbridges:laser_fence_source_block[color=14,face=wall,facing=east,powered=false]	laserbridges:laser_fence_source_block[color=14,face=wall,facing=east,powered=true]	true	red-source-powered
+natural-fence-first	first naturally generated red fence	162	100	173	laserbridges:laser_fence_powered[color=14,face=wall,facing=east]	laserbridges:laser_fence_powered[color=14,face=wall,facing=east]	false	red-natural-fence
+natural-fence-middle	middle naturally generated red fence	168	100	173	laserbridges:laser_fence_powered[color=14,face=wall,facing=east]	laserbridges:laser_fence_powered[color=14,face=wall,facing=east]	false	red-natural-fence
+natural-fence-last	last naturally generated red fence	175	100	173	laserbridges:laser_fence_powered[color=14,face=wall,facing=east]	laserbridges:laser_fence_powered[color=14,face=wall,facing=east]	false	red-natural-fence

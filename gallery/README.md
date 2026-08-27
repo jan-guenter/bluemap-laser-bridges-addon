@@ -1,11 +1,12 @@
-# Placeholder gallery
+# Laser Bridges gallery
 
-This generated gallery proves only the deterministic data-pack mechanics and a
-single `minecraft:stone` stock control at `(176, 100, 175)`. It does not claim
-Laser Bridges & Doors support.
+This generated gallery covers both source blocks and both generated surface
+blocks. It includes representative colors and floor, wall and ceiling model
+rotations, plus two redstone-powered rows that exercise natural bridge and
+fence generation. Direct-set generated surfaces and a stone control keep the
+render comparison useful if server updates disturb a powered row.
 
-Replace `cases.py` with the smallest real defect fixture and stock controls,
-then keep the stable commands:
+Use the stable commands:
 
 ```bash
 python gallery/generate.py
@@ -14,6 +15,5 @@ python gallery/lint.py
 bash gallery/package.sh /tmp/laserbridges-gallery.zip
 ```
 
-The release gate rejects the `SCAFFOLD_NOT_IMPLEMENTED` marker in `cases.py`.
 Keep gallery generation deterministic, bounded, synthetic where practical, and
 free of candidate assets or captured meshes.
