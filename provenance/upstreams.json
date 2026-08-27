@@ -1,0 +1,53 @@
+{
+  "artifacts": [
+    {
+      "curseforge_file": 7150038,
+      "curseforge_project": 776337,
+      "download_url": "https://www.curseforge.com/api/v1/mods/776337/files/7150038/download",
+      "evidence": "All the Mons 1.2.0 exact staging runtime archive; SHA-1 matches published CurseForge 776337/7150038",
+      "evidence_tier": "T2_ARTIFACT_EXACT",
+      "file_name": "laserbridges-1.21.1-neoforge-5.3.jar",
+      "key": "laserBridges",
+      "license": "MIT",
+      "mod_id": "laserbridges",
+      "redistributed": false,
+      "sha1": "7948963864bce55a574d7c254c39760e9653bcc0",
+      "sha256": "51fbc91a5d5b28ff8664da3d60c1e13066f61d959ff7fabc15a7e3f55d8c9a72",
+      "size": 199979,
+      "version": "5.3"
+    },
+    {
+      "curseforge_file": 8237493,
+      "curseforge_project": 1158094,
+      "download_url": "https://www.curseforge.com/api/v1/mods/1158094/files/8237493/download",
+      "evidence": "All the Mons 1.2.0 exact staging runtime archive; SHA-1 matches the required published Deimos 2.7 dependency",
+      "evidence_tier": "T2_ARTIFACT_EXACT",
+      "file_name": "deimos-1.21.1-neoforge-2.7.jar",
+      "key": "deimos",
+      "license": "MIT",
+      "mod_id": "deimos",
+      "redistributed": false,
+      "sha1": "1b026e8e83030a27e762294f87f30eea5b23fa58",
+      "sha256": "ee35d4e8967ccb23dee3c1a05b55c8d4ac0e0045bf8d324e215b397869af0573",
+      "size": 49576,
+      "version": "2.7"
+    }
+  ],
+  "bluemap": {
+    "api_commit": "285c9a60eff3ac2b0cab308ce1058d1565be0971",
+    "commit": "9be321df995a1103808621d529eb72773e719d4d",
+    "license": "MIT",
+    "redistributed": false,
+    "version": "5.22-agent.backport-5.22-mc1.21.1-2"
+  },
+  "pack": {
+    "commit": "c7bb230f21d14d26859d0b92548f089b3a493ad9",
+    "minecraft": "1.21.1",
+    "name": "All the Mons",
+    "neoforge": "21.1.248",
+    "version": "1.2.0"
+  },
+  "profile": "laserbridges-5.3-mc1.21.1",
+  "schema": 1,
+  "source_use": "Runtime interfaces and installed resources may be interpreted only after family-specific evidence is recorded; no candidate classes, assets, binaries, source, or captured meshes are packaged."
+}

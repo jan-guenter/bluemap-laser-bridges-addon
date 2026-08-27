@@ -1,0 +1,379 @@
+{
+  "deterministic": true,
+  "family_id": "laserbridges",
+  "generator": "bluemap-java21-addon-scaffold-v1",
+  "initial_files": [
+    {
+      "mode": "0644",
+      "path": ".gitattributes",
+      "sha256": "c0b5802900ed076871e7878f051eb2cd8d7918dbfada3f40f86300fa7325252d",
+      "size": 58
+    },
+    {
+      "mode": "0644",
+      "path": ".github/workflows/ci.yml",
+      "sha256": "0ff806db7a90708990dbb10961055a12ceb375f3ec55e2feb885054011510bd4",
+      "size": 5148
+    },
+    {
+      "mode": "0644",
+      "path": ".github/workflows/release.yml",
+      "sha256": "751cb5d311f670ec3883df227c1719041100675ab1249d543a87e55f6e4df086",
+      "size": 7291
+    },
+    {
+      "mode": "0644",
+      "path": ".gitignore",
+      "sha256": "a5030053f21da04c319ab8abe4020d2ee1d488430e79f0b8ce04f1d7f29a93f6",
+      "size": 105
+    },
+    {
+      "mode": "0644",
+      "path": "AGENTS.md",
+      "sha256": "d8fc5a4f02bd10ae8d27982958217db55dfe266f05f223df855c1c8580e5573a",
+      "size": 2182
+    },
+    {
+      "mode": "0644",
+      "path": "CHANGELOG.md",
+      "sha256": "46606acfc1878c75fe149f81433c11c6a5aee0812a00f3f387eb89e8e8fa7c2e",
+      "size": 207
+    },
+    {
+      "mode": "0644",
+      "path": "LICENSE",
+      "sha256": "f079a10f7ddfae72170c16c8be18685f05e36309955c3858e9f863d4cae7cfce",
+      "size": 1068
+    },
+    {
+      "mode": "0644",
+      "path": "LICENSE-BlueMap",
+      "sha256": "f1c190d4a1ff29606cbed7a0d97fc7b7117cc2e1169e19caa753198957dbbfd6",
+      "size": 1122
+    },
+    {
+      "mode": "0644",
+      "path": "NOTICE.md",
+      "sha256": "f4f6c85a0287b66cc3d88fe0d87655488fe7fbd8f327366514b982997d150c11",
+      "size": 436
+    },
+    {
+      "mode": "0644",
+      "path": "README.md",
+      "sha256": "878833684b9cf68717c526e2ade673b0264cb67345fe1304560e080b9f7a597e",
+      "size": 1564
+    },
+    {
+      "mode": "0644",
+      "path": "THIRD_PARTY.md",
+      "sha256": "64505c220f4888355037ed7dbbd37edbdb4a3372b99c7a63d2947cc07e3a399d",
+      "size": 625
+    },
+    {
+      "mode": "0644",
+      "path": "build.gradle",
+      "sha256": "1b9467fa01b020370bbaa61d19cc80e62d7e7e5f2015960c8e1ff644a69f73b1",
+      "size": 19600
+    },
+    {
+      "mode": "0644",
+      "path": "config/checkstyle/checkstyle.xml",
+      "sha256": "77fe7b6d9a70f527daf7288ad2955e467f1059ef75b0c3d0d63694c8bea285d7",
+      "size": 791
+    },
+    {
+      "mode": "0644",
+      "path": "docs/EXECUTION.md",
+      "sha256": "d1d694ce68c21d7b55eecd34323fdf22e7668dec909302c26669033295b25f76",
+      "size": 2123
+    },
+    {
+      "mode": "0644",
+      "path": "docs/RELEASING.md",
+      "sha256": "7488e66595e35648c172f99f43104e5dc8bdc99569a106b25bb628ef7f4b4b5d",
+      "size": 1522
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/README.md",
+      "sha256": "12601dd7d3709668b7285dc829aefb8a9b8b861d7741d21f6dffb767a915bfbd",
+      "size": 676
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/SHA256SUMS",
+      "sha256": "e2a137f3ed08d7699f84db0f37361c9a56253def6d02c29265090f16764bc763",
+      "size": 919
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/cases.py",
+      "sha256": "1e76bda210eba83d4d33ee1c546cd5183cd91c66fa9327dcd73cc526bfbc396f",
+      "size": 766
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/laserbridges_gallery/function/build.mcfunction",
+      "sha256": "a97296601ff58a881e13a6dbdf14f5d219bfb60ebfb972496026e8d6151bc302",
+      "size": 206
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/laserbridges_gallery/function/clear.mcfunction",
+      "sha256": "4507683d949af7e2312781de5e2ef0cb5d090ff6584e08f003a406bb4586b5d3",
+      "size": 91
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/laserbridges_gallery/function/load.mcfunction",
+      "sha256": "ec96ace4f228ec2d7d07f6bb56f3ac76ad9c2ce4281185019776eabc43100192",
+      "size": 179
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/laserbridges_gallery/function/release.mcfunction",
+      "sha256": "8243f401dd913fe38d7bd6074aaafe76ec0a55fe20204a0e0b3927a6bcaa4cae",
+      "size": 85
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/laserbridges_gallery/function/verify.mcfunction",
+      "sha256": "e1f8a058fa898202cbbdaeae1fd46741b7fcf10f10d248799f3df615660d4e76",
+      "size": 259
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/minecraft/tags/function/load.json",
+      "sha256": "febb4edc777eb251bdb7202b57f1b68ec24c729c4d8fc0a9e0016d92cfe220af",
+      "size": 54
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/pack.mcmeta",
+      "sha256": "d0767e7ed3396eb4c6ebac528011eed822f1df5f94cc62ce3bfb582d80d4e933",
+      "size": 116
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/generate.py",
+      "sha256": "a07fb7fd94b9df9d7ec947663d78244b1b31c476012a9dbd8fff8b3083fb495e",
+      "size": 4835
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/lint.py",
+      "sha256": "b970deb190d8597b0b0c07429be2898edd5bad6cef5c35e0f5b4bdfad7d58982",
+      "size": 2469
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/package.sh",
+      "sha256": "c02bd09169ed36cbba61e3dc73fba0e13dc8333a55e4ea059ba96c01b9b5c1a1",
+      "size": 1320
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/placements.tsv",
+      "sha256": "b56ee047c4aa36d26a7ca29b867a4bee61e3fa5aa25f0c4247ee46ca07cff797",
+      "size": 127
+    },
+    {
+      "mode": "0644",
+      "path": "gradle.properties",
+      "sha256": "fc4285432c6cf7de105d368644628e74a18f4e770363a5ebd68201872083f03c",
+      "size": 610
+    },
+    {
+      "mode": "0644",
+      "path": "provenance/release.json",
+      "sha256": "72fd277026a869bc235c98afc29c347d86729ce3c11005a9ddb4f4bc17ba56a7",
+      "size": 369
+    },
+    {
+      "mode": "0644",
+      "path": "provenance/upstreams.json",
+      "sha256": "223b077e6412f0c9b2ffb0cc5dcd2cce5c86ef2cd8e8d66fb564b0f8581a4a42",
+      "size": 2114
+    },
+    {
+      "mode": "0644",
+      "path": "settings.gradle",
+      "sha256": "a0fd560d07af052ba4c3ad0a6a6ef29fd5a0b7f74d56bea02970c242381cdbcb",
+      "size": 1432
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/laserbridges/BlueMapLaserBridgesAddon.java",
+      "sha256": "4b233d0edb3627bbe937da6db49cc54ee083ad217ba8221c225a655992cf69f5",
+      "size": 1577
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/laserbridges/activation/AddonRuntime.java",
+      "sha256": "1150134d9870d1e80b97f2c0f4e8ec82653c3158348b8c83d638bb280d7c9bfc",
+      "size": 2172
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/laserbridges/adapter/bluemap522/AdapterCompatibility.java",
+      "sha256": "d43d0dee626c5892e2195287d3c762a2a4473786d9e3c5014cdbcdb5a7030b46",
+      "size": 1042
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/laserbridges/adapter/bluemap522/BlueMap522Adapter.java",
+      "sha256": "7ba3f4edc22434a28c3dae3e7689964aa8784e6de599672fa213c4ba51bd3cbd",
+      "size": 1144
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/laserbridges/adapter/bluemap522/ProfileResourceExtension.java",
+      "sha256": "4fd1c3e8bbf9233be429672baff65270d691115b9af76bc36615679ee3085e9c",
+      "size": 1712
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/laserbridges/adapter/bluemap522/ProfileResourceExtensionType.java",
+      "sha256": "764729759ef057d15f1feafdcc9da57f07fd1b095c494db293188f8e5d20f143",
+      "size": 933
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/laserbridges/adapter/bluemap522/RegistryGuard.java",
+      "sha256": "6bf257b51b1920417487282231488780ec401f428937fcc410b3c84f4267521f",
+      "size": 879
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/laserbridges/profile/ArtifactPin.java",
+      "sha256": "5cf9e1fc2b12d7c315caa65a8def3496eea2050d1b7effbbf212f8b7ad7d81c2",
+      "size": 1374
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/laserbridges/profile/ExactArtifactDetector.java",
+      "sha256": "9b6d859a5206567ac781c20acd88e569aba012111b6b27a8f6d9075097c8fc92",
+      "size": 9965
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/laserbridges/profile/LaserBridges53Profile.java",
+      "sha256": "eb178c000469572c743c2b9b28c3a32437395596b7b6c169096e4ec6a199cf21",
+      "size": 1047
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/resources/bluemap.addon.json",
+      "sha256": "a1f4677e71337d34206807396055864c542e3022335bf5a3055de090513dc5e0",
+      "size": 170
+    },
+    {
+      "mode": "0644",
+      "path": "src/test/java/io/github/janguenter/bluemap/laserbridges/activation/AddonRuntimeTest.java",
+      "sha256": "0eb7daa099638a0cbb6754b32ba561a1c3fd202496e09ffe63b696fa357971fa",
+      "size": 1078
+    },
+    {
+      "mode": "0644",
+      "path": "src/test/java/io/github/janguenter/bluemap/laserbridges/adapter/bluemap522/AdapterCompatibilityTest.java",
+      "sha256": "2880cb51f6388ba30d915d8236e9406070869fdb10f9f230d05e2fb772cc0090",
+      "size": 966
+    },
+    {
+      "mode": "0644",
+      "path": "src/test/java/io/github/janguenter/bluemap/laserbridges/profile/ExactArtifactDetectorTest.java",
+      "sha256": "539b7e40d70a31b937ad9bee8e51c9ab0702e162a7e407149eb8fd5eddd7733f",
+      "size": 3427
+    },
+    {
+      "mode": "0755",
+      "path": "tools/verify_pinned_artifacts.py",
+      "sha256": "dc7c6d80796f9d5773183a499aa61320a0126ac21f1fdb5c8e872bbf618ca798",
+      "size": 3508
+    },
+    {
+      "mode": "0755",
+      "path": "tools/verify_staged_equivalence.py",
+      "sha256": "cc8fa6cb1e79b85555b9f10920909b0c03fdc8d78445e07c877674e513fcff9f",
+      "size": 4441
+    }
+  ],
+  "repository": "bluemap-laser-bridges-addon",
+  "schema": 1,
+  "spec_sha256": "3e6bd052419cca46f04c210fe6692095b008f200276fb4dfeadcf01d75084004",
+  "steps": [
+    {
+      "description": "Validate the reviewed scaffold spec.",
+      "id": "validate-spec",
+      "number": 1,
+      "status": "complete"
+    },
+    {
+      "description": "Render and byte-audit the deterministic seed.",
+      "id": "render-seed",
+      "number": 2,
+      "status": "complete"
+    },
+    {
+      "description": "Initialize the independent child repository and feature branch.",
+      "id": "initialize-repository",
+      "number": 3,
+      "status": "pending"
+    },
+    {
+      "description": "Acquire exact candidate artifacts outside Git and verify their identities.",
+      "id": "acquire-artifacts",
+      "number": 4,
+      "status": "pending"
+    },
+    {
+      "description": "Verify Java 21 and exact BlueMap, API, pack, and loader pins.",
+      "id": "verify-baseline",
+      "number": 5,
+      "status": "pending"
+    },
+    {
+      "description": "Implement family-owned registration, profile, decoder, and renderer.",
+      "id": "implement-family",
+      "number": 6,
+      "status": "pending"
+    },
+    {
+      "description": "Add focused compatibility, decoder, geometry, and fallback tests.",
+      "id": "focused-tests",
+      "number": 7,
+      "status": "pending"
+    },
+    {
+      "description": "Replace the stock-only gallery with the smallest defect fixture.",
+      "id": "defect-gallery",
+      "number": 8,
+      "status": "pending"
+    },
+    {
+      "description": "Build a prototype and deploy it promptly to disposable staging.",
+      "id": "stage-prototype",
+      "number": 9,
+      "status": "pending"
+    },
+    {
+      "description": "Obtain owner comparison and visual acceptance in client and BlueMap.",
+      "id": "owner-acceptance",
+      "number": 10,
+      "status": "pending"
+    },
+    {
+      "description": "Seal staging and publication identities and run the release gate.",
+      "id": "seal-release",
+      "number": 11,
+      "status": "pending"
+    },
+    {
+      "description": "Merge, tag, publish, verify, and update root coordination.",
+      "id": "publish-coordinate",
+      "number": 12,
+      "status": "pending"
+    }
+  ],
+  "template_sha256": "1f2c783eba67d25f04797d145b6f7f94f97370e6f31360758099fb176c9ca879"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "bluemap-laserbridges",
+  "entrypoint": "io.github.janguenter.bluemap.laserbridges.BlueMapLaserBridgesAddon",
+  "dependencies": [],
+  "soft-dependencies": []
+}
