@@ -3,10 +3,10 @@
 A Java 21 BlueMap add-on for the exact `laserbridges-5.3-mc1.21.1` profile in All the Mons
 `1.2.0` / Minecraft `1.21.1`.
 
-Status: exact-profile prototype. After exact admission, the add-on reuses the
-installed JSON models, textures and animation metadata for all four blocks and
-restores the persisted `color=0..15` client tint. Unsupported or malformed
-states retain stock rendering.
+Status: owner-accepted `0.1.0-alpha.1` release candidate. After exact admission,
+the add-on reuses the installed JSON models, textures and animation metadata
+for all four blocks and restores the persisted `color=0..15` client tint.
+Unsupported or malformed states retain stock rendering.
 
 ## Build
 
