@@ -1,10 +1,66 @@
 {
-  "accepted_staging_entries": null,
-  "final_release_artifacts": null,
-  "note": "Populate only after owner visual acceptance; this file is not packaged.",
-  "owner_accepted_staging": null,
+  "accepted_staging_entries": {
+    "entry_count": 28,
+    "path": "provenance/accepted-staging-entries.sha256",
+    "sha256": "d3a4acb6e72f8b08db6824cf92f1fd153b567d24449fbbd2ad99a7f1fde45323"
+  },
+  "final_release_artifacts": {
+    "gradle_module": {
+      "file_name": "bluemap-laser-bridges-addon-0.1.0-alpha.1.module.json",
+      "sha256": "61ce9aba68e7d8e23cb7f21cd489cdf55590283269c903c75d44d83f7a715eef",
+      "size": 2859
+    },
+    "pom": {
+      "file_name": "bluemap-laser-bridges-addon-0.1.0-alpha.1.pom",
+      "sha256": "f7447c62eb5d94b02b270c1a000ca72a7c76e4438d27e2ba9abc3e361d09d4c4",
+      "size": 1377
+    },
+    "production_jar": {
+      "file_name": "bluemap-laser-bridges-addon-0.1.0-alpha.1.jar",
+      "sha256": "f4229a2ad89eafbc7c0d1a434cec53c859c051221804ee3013ed4fde34284193",
+      "size": 91268
+    },
+    "sources_jar": {
+      "file_name": "bluemap-laser-bridges-addon-0.1.0-alpha.1-sources.jar",
+      "sha256": "970204e3e5024c1d82ec0917303dedfdbe389d65ef8e810f4a4d55f6dac2e5c8",
+      "size": 60983
+    }
+  },
+  "note": "Owner-accepted staging identities and final publication artifacts are sealed here. This file is not packaged.",
+  "owner_accepted_staging": {
+    "accepted_on": "2026-08-28",
+    "addon_jar": {
+      "file_name": "bluemap-laser-bridges-addon-0.1.0-SNAPSHOT.jar",
+      "sha256": "33b0d814f42f58c096d4877929b4f5a1d9271ea14b3461b54e163bde9417e496",
+      "size": 91269
+    },
+    "candidate_inputs": {
+      "deimos": {
+        "file_name": "deimos-1.21.1-neoforge-2.7.jar",
+        "sha256": "ee35d4e8967ccb23dee3c1a05b55c8d4ac0e0045bf8d324e215b397869af0573",
+        "size": 49576
+      },
+      "laserBridges": {
+        "file_name": "laserbridges-1.21.1-neoforge-5.3.jar",
+        "sha256": "51fbc91a5d5b28ff8664da3d60c1e13066f61d959ff7fabc15a7e3f55d8c9a72",
+        "size": 199979
+      }
+    },
+    "gallery": {
+      "file_name": "laserbridges-gallery.zip",
+      "sha256": "26db018545e4ac16a99f15bb52ecf3b336385fa6f097a576321e1ed2db2ee4c6",
+      "size": 2807
+    },
+    "visual_acceptance": true
+  },
+  "prototype_scope": [
+    "installed JSON geometry and exact blockstate rotations for all four Laser Bridges block IDs",
+    "persisted color 0 through 15 mapped to the exact client DyeColor diffuse palette",
+    "installed translucent animated beam texture and deterministic light level 10",
+    "bounded stock fallback for unsupported, missing, disabled, or malformed states"
+  ],
   "repository": "https://github.com/jan-guenter/bluemap-laser-bridges-addon",
   "schema_version": 1,
-  "status": "prototype-not-owner-accepted",
-  "version": "0.1.0-SNAPSHOT"
+  "status": "owner-accepted-release-candidate",
+  "version": "0.1.0-alpha.1"
 }

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: MIT
-"""Lint the generated placeholder gallery without starting Minecraft."""
+"""Lint the generated Laser Bridges gallery without starting Minecraft."""
 
 from __future__ import annotations
 
@@ -31,36 +31,59 @@ def main() -> int:
     )
     if load_tag != {"values": [f"{cases.NAMESPACE}:load"]}:
         raise ValueError("load tag differs from the exact namespace")
-    if len(cases.PLACEMENTS) != 1:
-        raise ValueError("placeholder must contain exactly one stock control")
-
-    placement = cases.PLACEMENTS[0]
-    if placement.block_state != "minecraft:stone" or placement.expected != (
-        "stock-visible"
-    ):
-        raise ValueError("placeholder must remain an honest stone stock control")
+    case_ids = [placement.case_id for placement in cases.PLACEMENTS]
+    if len(case_ids) != len(set(case_ids)):
+        raise ValueError("gallery case IDs must be unique")
+    stock = [
+        placement
+        for placement in cases.PLACEMENTS
+        if placement.case_id == "stock-control"
+    ]
+    if len(stock) != 1 or stock[0].block_state != "minecraft:stone":
+        raise ValueError("gallery needs one honest stone stock control")
+    targets = {
+        state.split("[", 1)[0]
+        for placement in cases.PLACEMENTS
+        for state in (
+            placement.block_state,
+            placement.verify_state or placement.block_state,
+        )
+        if state.startswith("laserbridges:")
+    }
+    if targets != {
+        "laserbridges:laser_source_block",
+        "laserbridges:laser_fence_source_block",
+        "laserbridges:laser_block_powered",
+        "laserbridges:laser_fence_powered",
+    }:
+        raise ValueError("gallery must cover all four exact target block IDs")
     minimum_x, minimum_y, minimum_z, maximum_x, maximum_y, maximum_z = (
         cases.ENVELOPE
     )
-    if not (
-        minimum_x <= placement.x <= maximum_x
-        and minimum_y <= placement.y <= maximum_y
-        and minimum_z <= placement.z <= maximum_z
-    ):
-        raise ValueError("placeholder placement escaped its bounded envelope")
+    for placement in cases.PLACEMENTS:
+        if not (
+            minimum_x <= placement.x <= maximum_x
+            and minimum_y <= placement.y <= maximum_y
+            and minimum_z <= placement.z <= maximum_z
+        ):
+            raise ValueError(f"gallery case escaped envelope: {placement.case_id}")
 
     function_root = ROOT / f"datapack/data/{cases.NAMESPACE}/function"
     functions = "\n".join(
         path.read_text(encoding="utf-8")
         for path in sorted(function_root.glob("*.mcfunction"))
     )
-    if len(re.findall(r"^setblock ", functions, re.MULTILINE)) != 1:
-        raise ValueError("placeholder must place exactly one block")
+    placed = sum(placement.place for placement in cases.PLACEMENTS)
+    if len(re.findall(r"^setblock ", functions, re.MULTILINE)) != placed:
+        raise ValueError("generated setblock count differs from placed cases")
     lowered = functions.lower()
     for forbidden in ("summon ", "data merge", "op ", "deop ", "stop "):
         if forbidden in lowered:
-            raise ValueError(f"forbidden placeholder command: {forbidden}")
-    print("placeholder gallery lint passed: one bounded stock control")
+            raise ValueError(f"forbidden gallery command: {forbidden}")
+    print(
+        "gallery lint passed: four targets, representative colors, "
+        "two stable powered rows and one stock control"
+    )
     return 0
 
 
