@@ -24,8 +24,8 @@ git submodule update --init --recursive -- tooling/bluemap-addon-toolkit
 ```
 
 The submodule supplies the Gradle convention source at toolkit
-`v0.2.0-alpha.1`, commit
-`f58da04567f10efe615c582797f3ab00b7a7343f`. `requirements/toolkit.txt`
+`v0.3.0-alpha.1`, commit
+`6cd34a8368cc4ee8628fbe830a90ec5b14960629`. `requirements/toolkit.txt`
 separately pins the published Python CLI used by artifact and staged-entry
 checks. Neither is packaged in the add-on JAR.
 
