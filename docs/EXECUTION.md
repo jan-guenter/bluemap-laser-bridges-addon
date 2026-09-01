@@ -3,10 +3,13 @@
 This repository starts inactive and stock-safe. Implement only the smallest
 observed Laser Bridges & Doors rendering defect before staging.
 
-Before running Gradle gates, activate a Python 3.11 or newer virtual
-environment and install the exact development-only toolkit into it:
+Before running Gradle gates, initialize both exact source submodules, activate
+a Python 3.11 or newer virtual environment, and install the exact
+development-only toolkit into it:
 
 ```bash
+git submodule update --init --recursive -- \
+  tooling/bluemap-addon-toolkit modules/bluemap-addon-adapter-api
 python -m pip install --disable-pip-version-check --no-deps \
   --require-hashes --only-binary=:all: \
   --requirement requirements/toolkit.txt
@@ -34,8 +37,11 @@ observed defects until the owner explicitly accepts one exact staging JAR.
 
 ## Acceptance and release
 
-Freeze that accepted JAR's functional entries once; the writer refuses to
-overwrite an existing acceptance record:
+The migration candidate records the production JAR, sources JAR, POM, and
+Gradle module identities under `candidate_artifacts`. After visual acceptance,
+change the provenance status to `owner-accepted-release-candidate`, record the
+exact integration run and accepted JAR, and freeze its functional entries.
+The writer refuses to overwrite an existing acceptance record:
 
 ```bash
 bluemap-addon-toolkit jar-entries write \
@@ -43,18 +49,16 @@ bluemap-addon-toolkit jar-entries write \
   --entries provenance/accepted-staging-entries.sha256
 ```
 
-Record the manifest in `provenance/release.json` as
-`accepted_staging_entries` with exact `path`, `entry_count`, and `sha256`.
-Record `visual_acceptance: true` under `owner_accepted_staging`, and record the
-production JAR, sources JAR, POM and Gradle module file names, sizes and hashes
-under `final_release_artifacts`.
+Record the accepted-entry manifest and final artifacts only during owner
+acceptance sealing. Do not carry alpha.1 acceptance forward as alpha.2 runtime
+evidence.
 
 Promote `addon_version` through a pull request and run with all exact candidate
 properties:
 
 ```bash
 gradle --no-daemon -PbluemapSourcePath=../bluemap-backport \
-  <exact-candidate-properties> -PreleaseTag=v<version> \
+  <exact-candidate-properties> -PreleaseTag=v0.1.0-alpha.2 \
   clean build generatePomFileForAddonPublication \
   generateMetadataFileForAddonPublication verifyReleaseCandidate
 ```
