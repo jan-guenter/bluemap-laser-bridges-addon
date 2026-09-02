@@ -3,7 +3,7 @@
 A Java 21 BlueMap add-on for the exact `laserbridges-5.3-mc1.21.1` profile in All the Mons
 `1.2.0` / Minecraft `1.21.1`.
 
-Status: unpublished `0.1.0-alpha.2` BlueMap 5.23 migration candidate. It moves
+Status: owner-accepted `0.1.0-alpha.2` BlueMap 5.23 release candidate. It moves
 the owner-accepted alpha.1 rendering contract to the exact feature backport and
 shared Adapter API without changing the four-block profile or gallery. After
 exact admission, the add-on reuses installed JSON models, textures and

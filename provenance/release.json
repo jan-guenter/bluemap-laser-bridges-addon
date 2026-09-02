@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "unpublished-migration-candidate",
+  "status": "owner-accepted-release-candidate",
   "published": false,
   "version": "0.1.0-alpha.2",
   "release_date": "2026-09-02",
@@ -59,6 +59,22 @@
     "deterministic_rebuild": true,
     "matches_alpha_1_owner_accepted_gallery": true
   },
+  "combined_integration_acceptance": {
+    "atmons_version": "1.2.0",
+    "accepted_on": "2026-09-02",
+    "owner_visual_acceptance": true,
+    "candidate_manifest_sha256": "315ed84b8edd88132854382da76498cd84b23cef3b30093bf7f69825b09a72a4",
+    "source_candidate_artifact": {
+      "file_name": "bluemap-laser-bridges-addon-0.1.0-alpha.2.jar",
+      "size": 96544,
+      "sha256": "39d8d9d6b35181e654d48c3f5b2938d307463000787a7acec0193a98ead5a773"
+    },
+    "staged_overlay_artifact": {
+      "file_name": "bluemap-laser-bridges-addon-0.1.0-alpha.1.jar",
+      "size": 96912,
+      "sha256": "5681c16dcacef9ddbab2885d569ede8b2132157e642bbdb93c32b98ce8bfad6a"
+    }
+  },
   "preserved_contract": {
     "routed_hosts": 4,
     "persisted_colors": 16,
@@ -88,6 +104,6 @@
     "authoritative_pr_ci_reproduction": true,
     "local_gradle_version": "9.6.1",
     "local_java_runtime": "21.0.12.1+1",
-    "exact_alpha_2_runtime_review": false
+    "exact_alpha_2_runtime_review": true
   }
 }
