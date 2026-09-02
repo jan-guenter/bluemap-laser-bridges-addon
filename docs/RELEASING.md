@@ -8,10 +8,11 @@ After the owner accepts the candidate:
 
 1. Confirm the renderer and focused gallery match the owner-accepted staging
    candidate.
-2. Freeze the accepted staging JAR's non-manifest entry hashes in
+2. Change the unpublished migration provenance to
+   `owner-accepted-release-candidate` and record the exact integration run.
+3. Freeze the accepted staging JAR's non-manifest entry hashes in
    `provenance/accepted-staging-entries.sha256` with the one-time
    `bluemap-addon-toolkit jar-entries write` command.
-3. Change `addon_version` from the SNAPSHOT to its final version through a PR.
 4. Build production JAR, sources JAR, POM, and Gradle module metadata with the
    exact promotion Java/Gradle/BlueMap inputs.
 5. Put their exact sizes and SHA-256 values in `gradle.properties` and complete

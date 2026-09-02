@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-package io.github.janguenter.bluemap.laserbridges.adapter.bluemap522;
+package io.github.janguenter.bluemap.laserbridges.adapter.bluemap523;
 
 import de.bluecolored.bluemap.core.resources.pack.resourcepack.ResourcePack;
 import de.bluecolored.bluemap.core.map.TextureGallery;
@@ -10,20 +10,25 @@ import de.bluecolored.bluemap.core.map.hires.RenderSettings;
 import de.bluecolored.bluemap.core.map.hires.block.BlockRenderer;
 import de.bluecolored.bluemap.core.map.hires.block.BlockRendererType;
 import de.bluecolored.bluemap.core.util.Key;
+import io.github.janguenter.bluemap.addon.adapter.api.bluemap523.RegistryGuard;
+import io.github.janguenter.bluemap.addon.adapter.api.bluemap523.ResourceExtensionType;
 import io.github.janguenter.bluemap.laserbridges.activation.AddonRuntime;
 
-/** BlueMap 5.22 registration boundary for the exact Laser Bridges profile. */
-public final class BlueMap522Adapter {
+/** BlueMap 5.23 feature-backport registration boundary. */
+public final class BlueMap523Adapter {
 
     private static final AddonRuntime RUNTIME = AddonRuntime.INSTANCE;
     private static final BlockRendererType RENDERER = new BlockRendererType.Impl(
             Key.parse("bluemap_laserbridges:exact_renderer"),
-            BlueMap522Adapter::createRenderer
+            BlueMap523Adapter::createRenderer
     );
     private static final ResourcePack.Extension<ProfileResourceExtension> EXTENSION =
-            new ProfileResourceExtensionType(RENDERER, RUNTIME);
+            new ResourceExtensionType<>(
+                    Key.parse("bluemap_laserbridges:exact_profile"),
+                    pack -> new ProfileResourceExtension(pack, RENDERER, RUNTIME)
+            );
 
-    private BlueMap522Adapter() {
+    private BlueMap523Adapter() {
     }
 
     /** Registers the exact profile and its bounded installed-model renderer. */
